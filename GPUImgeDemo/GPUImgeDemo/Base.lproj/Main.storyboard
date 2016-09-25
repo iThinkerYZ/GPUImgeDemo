@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oPR-Hx-JMx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1DV-Ph-yPL">
+            <objects>
+                <viewController id="oPR-Hx-JMx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XS3-02-9pt"/>
+                        <viewControllerLayoutGuide type="bottom" id="vJH-hM-pOy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBC-rD-N0v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlJ-Oz-dbN">
+                                <rect key="frame" x="105" y="162" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3vg-1k-W8v"/>
+                                </constraints>
+                                <state key="normal" title="GPUImage原生美颜"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kGP-yG-E7F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGU-Z6-rRo">
+                                <rect key="frame" x="112" y="284" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2JT-aW-Wy4"/>
+                                </constraints>
+                                <state key="normal" title="利用美颜滤镜美颜"/>
+                                <connections>
+                                    <segue destination="Myw-F0-pys" kind="show" id="OBY-KA-aUR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AlJ-Oz-dbN" firstAttribute="leading" secondItem="FBC-rD-N0v" secondAttribute="leading" constant="105" id="7Ww-Wq-B9Q"/>
+                            <constraint firstItem="AlJ-Oz-dbN" firstAttribute="top" secondItem="XS3-02-9pt" secondAttribute="bottom" constant="142" id="Fpv-NY-jf4"/>
+                            <constraint firstAttribute="trailing" secondItem="AlJ-Oz-dbN" secondAttribute="trailing" constant="136" id="QYS-7J-rIf"/>
+                            <constraint firstItem="oGU-Z6-rRo" firstAttribute="top" secondItem="AlJ-Oz-dbN" secondAttribute="bottom" constant="92" id="mhh-St-klT"/>
+                            <constraint firstAttribute="trailing" secondItem="oGU-Z6-rRo" secondAttribute="trailing" constant="143" id="uY5-Q1-9TX"/>
+                            <constraint firstItem="oGU-Z6-rRo" firstAttribute="leading" secondItem="FBC-rD-N0v" secondAttribute="leading" constant="112" id="xa6-uV-spf"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJJ-uP-qgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="373"/>
+        </scene>
+        <!--Beautify Filter View Controller-->
+        <scene sceneID="ULO-GM-LeL">
+            <objects>
+                <viewController id="Myw-F0-pys" customClass="BeautifyFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A1B-4c-4Tu"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCo-iX-KBG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ruK-Wy-LPn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-Te-hsu">
+                                <rect key="frame" x="306" y="45" width="51" height="31"/>
+                                <connections>
+                                    <action selector="openBeautifyFilter:" destination="Myw-F0-pys" eventType="valueChanged" id="CbN-Sb-tMC"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美颜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfW-3g-XsN">
+                                <rect key="frame" x="317" y="29" width="26" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WgO-Te-hsu" secondAttribute="trailing" constant="20" id="Ex4-Eu-oaY"/>
+                            <constraint firstItem="pfW-3g-XsN" firstAttribute="centerX" secondItem="WgO-Te-hsu" secondAttribute="centerX" id="Iek-1s-9Ud"/>
+                            <constraint firstItem="WgO-Te-hsu" firstAttribute="top" secondItem="pfW-3g-XsN" secondAttribute="bottom" id="Yqq-fw-tAA"/>
+                            <constraint firstItem="WgO-Te-hsu" firstAttribute="top" secondItem="A1B-4c-4Tu" secondAttribute="bottom" constant="25" id="ojt-It-hdK"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aT8-kx-TQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.5" y="826.5"/>
+        </scene>
+        <!--Image Filter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GPUImageFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="piq-tP-jlc">
+                                <rect key="frame" x="8" y="572" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5sx-fm-n8E"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.17228987170000001" green="0.70445109839999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="bilateralFilter:" destination="BYZ-38-t0r" eventType="valueChanged" id="7ie-GB-Ziy"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="COh-fg-qyZ">
+                                <rect key="frame" x="8" y="637" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KQN-EH-QJh"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.17228987170000001" green="0.70445109839999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="brightnessFilter:" destination="BYZ-38-t0r" eventType="valueChanged" id="eW4-Po-wLQ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="美白" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-Zb-0km">
+                                <rect key="frame" x="174" y="626" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="磨皮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-p4-XKX">
+                                <rect key="frame" x="174" y="557" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="piq-tP-jlc" secondAttribute="trailing" constant="10" id="BFc-JZ-84P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="COh-fg-qyZ" secondAttribute="bottom" id="Fpr-4t-EjP"/>
+                            <constraint firstAttribute="trailing" secondItem="COh-fg-qyZ" secondAttribute="trailing" constant="10" id="Tog-pM-gaC"/>
+                            <constraint firstItem="COh-fg-qyZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="p8q-Mb-wg1"/>
+                            <constraint firstItem="piq-tP-jlc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="pTk-bN-BZ4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="piq-tP-jlc" secondAttribute="bottom" constant="65" id="sHI-fh-ijA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603.5" y="-23.5"/>
+        </scene>
+    </scenes>
+</document>
